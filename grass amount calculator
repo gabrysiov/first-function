@@ -1,0 +1,23 @@
+def seed_calculator(fountain_side, grass_width):
+    '''
+    Calculate number of kilograms of grass seed needed for a border around a square fountain
+
+        Parameters
+            fountain_side (num) : lenght of 1 side of fountain in meters
+            grass_width (num): width of the grass border in meters
+
+        Returns:
+            seed (float): amount of seed needed in kilogrames for a grass border
+            
+    '''
+    # area of fountain
+    fountain_area = fountain_side**2
+    # total area
+    total_area = (fountain_side + 2 * grass_width)**2
+    # area of grass border
+    grass_area = total_area - fountain_area
+    # amount of seed needed (35g/sq.m)
+    seed_amount = grass_area * 35
+    # convert to kg
+    seed = seed_amount / 1000
+    return seed
