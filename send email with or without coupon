@@ -1,0 +1,7 @@
+def send_email(num_visits, visits_email, visit_coupon):
+    if num_visits >= visits_email:
+       print('send email only')
+    if num_visits >= visit_coupon:
+       print('send email with coupon')
+    elif num_visits <= visits_email:
+       print('Not enough visits.')
