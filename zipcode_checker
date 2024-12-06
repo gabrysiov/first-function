@@ -1,0 +1,11 @@
+def zip_checker (zipcode):
+    if len(zipcode) == 5 and zipcode[:2] != '00':
+        print(str(zipcode))
+    elif len(zipcode) == 4: 
+        if zipcode[:1] != '0':
+            print(str(0) + zipcode) #adds zero at the beggining
+        else:
+            print('invalid ZIP Code')
+    else: 
+        print('invalid zipcode')
+        
